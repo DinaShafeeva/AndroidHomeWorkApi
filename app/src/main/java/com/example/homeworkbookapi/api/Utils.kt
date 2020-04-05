@@ -1,4 +1,4 @@
-package com.example.homeworkbookapi
+package com.example.homeworkbookapi.api
 
 import java.security.MessageDigest
 import java.security.NoSuchAlgorithmException

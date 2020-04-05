@@ -1,13 +1,12 @@
-package com.example.homeworkbookapi
+package com.example.homeworkbookapi.api
 
-import okhttp3.HttpUrl
+import com.example.homeworkbookapi.BuildConfig
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
 import retrofit2.converter.gson.GsonConverterFactory
-import java.security.MessageDigest
 
 
 object ApiFactory {

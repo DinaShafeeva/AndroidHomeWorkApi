@@ -1,4 +1,4 @@
-package com.example.homeworkbookapi
+package com.example.homeworkbookapi.api
 
 import androidx.annotation.Nullable
 import retrofit2.http.GET

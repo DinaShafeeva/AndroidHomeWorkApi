@@ -1,17 +1,13 @@
 package com.example.homeworkbookapi
 
 import android.app.Activity
-import android.content.Context
 import android.content.Intent
 import android.os.Bundle
-import android.util.AttributeSet
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
 import com.example.homeworkbookapi.databinding.ActivitySecondBinding
+import com.example.homeworkbookapi.viewModels.CharacterViewModel
 
 
 class SecondActivity : AppCompatActivity() {
