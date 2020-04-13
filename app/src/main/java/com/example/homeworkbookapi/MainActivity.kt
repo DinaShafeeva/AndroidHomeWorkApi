@@ -6,7 +6,9 @@ import android.view.Menu
 import android.view.MenuItem
 import android.widget.SearchView
 import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.homeworkbookapi.di.ViewModelFactory
 import com.example.homeworkbookapi.recycler.MarvelAdapter
 import com.google.android.material.snackbar.Snackbar
 import kotlinx.android.synthetic.main.activity_main.*
@@ -16,9 +18,11 @@ import com.example.homeworkbookapi.viewModels.MainViewModel
 
 class MainActivity : AppCompatActivity() {
     private lateinit var viewModel: MainViewModel
-    private var adapter: MarvelAdapter? = null;
+    private var adapter: MarvelAdapter? = null
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        App.appComponent.plusNetComponentBuilder().build()
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
@@ -28,6 +32,7 @@ class MainActivity : AppCompatActivity() {
         }
         rv_marvel.layoutManager = LinearLayoutManager(this)
         rv_marvel.adapter = adapter
+        //     viewModel = ViewModelProvider(this, ViewModelFactory()).get(MainViewModel::class.java)
         viewModel = MainViewModel()
         getData()
     }

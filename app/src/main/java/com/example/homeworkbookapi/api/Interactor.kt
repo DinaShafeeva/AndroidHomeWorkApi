@@ -1,14 +1,14 @@
 package com.example.homeworkbookapi.api
 
-import com.example.homeworkbookapi.api.ApiFactory
-import com.example.homeworkbookapi.api.Repository
 import com.example.homeworkbookapi.res.MarvelCharacter
 import io.reactivex.Observable
+import javax.inject.Inject
 
 
 class Interactor {
-    private val repository: Repository =
-        Repository(ApiFactory.marvelService)
+
+    @Inject
+    lateinit var repository: Repository
 
     fun getCharacters(): Observable<MarvelCharacter> {
         return repository.getCharacters()

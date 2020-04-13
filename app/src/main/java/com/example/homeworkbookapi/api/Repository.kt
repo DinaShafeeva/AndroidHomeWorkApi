@@ -4,9 +4,13 @@ import com.example.homeworkbookapi.BuildConfig
 import com.example.homeworkbookapi.res.MarvelCharacter
 import io.reactivex.Observable
 import java.util.*
+import javax.inject.Inject
 
 
-class Repository( val marvelService: MarvelService) {
+class Repository( ) {
+    @Inject
+    lateinit var marvelService: MarvelService
+
     val defaultLimit = 10
     var offset = 0
     val timestamp = Date().time
