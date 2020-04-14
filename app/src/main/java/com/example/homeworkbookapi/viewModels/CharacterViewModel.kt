@@ -9,14 +9,15 @@ import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.Disposable
 import io.reactivex.schedulers.Schedulers
 import com.example.homeworkbookapi.res.Result
+import javax.inject.Inject
 
 class CharacterViewModel(): ViewModel() {
     private  var resultLiveData: MutableLiveData<Result> = MutableLiveData()
-    val interactor: Interactor =
-        Interactor()
+
+    @Inject
+    lateinit var interactor: Interactor
 
     fun  getCharacterMutableLiveData(id: Int): MutableLiveData<Result> {
-
         var data:Disposable = interactor.getCharacter(id).subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread()).subscribe({
                     data -> resultLiveData.value = data.data.results.get(0)

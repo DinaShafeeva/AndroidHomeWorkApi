@@ -1,4 +1,4 @@
-package com.example.homeworkbookapi.di
+package com.example.homeworkbookapi.di.viewModel
 
 import androidx.lifecycle.ViewModel
 import dagger.MapKey

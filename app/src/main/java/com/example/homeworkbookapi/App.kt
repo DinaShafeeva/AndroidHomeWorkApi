@@ -1,10 +1,7 @@
 package com.example.homeworkbookapi
 
 import android.app.Application
-import com.example.homeworkbookapi.di.components.AppComponent
-import com.example.homeworkbookapi.di.components.DaggerAppComponent
-import com.example.homeworkbookapi.di.components.NetComponent
-import com.example.homeworkbookapi.di.components.ServiceComponent
+import com.example.homeworkbookapi.di.components.*
 
 class App: Application() {
 
@@ -18,11 +15,14 @@ class App: Application() {
             .build()
     }
 
+
     companion object {
 
         lateinit var appComponent: AppComponent
         lateinit var netComponent: NetComponent
         lateinit var serviceComponent: ServiceComponent
+        lateinit var repComponent: RepComponent
+        lateinit var interactorComponent: InteractorComponent
     }
 
 }

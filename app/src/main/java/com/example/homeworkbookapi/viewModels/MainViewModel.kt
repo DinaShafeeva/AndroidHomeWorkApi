@@ -9,13 +9,15 @@ import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.Disposable
 import io.reactivex.schedulers.Schedulers
 import com.example.homeworkbookapi.res.Result
+import javax.inject.Inject
 
 
 class MainViewModel() : ViewModel() {
 
     private  var resultLiveData: MutableLiveData<List<Result>> = MutableLiveData<List<Result>>()
-    val interactor: Interactor =
-        Interactor()
+
+    @Inject
+   lateinit var interactor: Interactor
 
     fun  getCharactersMutableLiveData(): MutableLiveData<List<Result>> {
             var data: Disposable = interactor.getCharacters().subscribeOn(Schedulers.io())

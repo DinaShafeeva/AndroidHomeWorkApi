@@ -1,7 +1,8 @@
-package com.example.homeworkbookapi.di
+package com.example.homeworkbookapi.di.viewModel
 
 import androidx.lifecycle.ViewModel
 import com.example.homeworkbookapi.di.scopes.NetScope
+import com.example.homeworkbookapi.di.viewModel.ViewModelKey
 import com.example.homeworkbookapi.viewModels.MainViewModel
 import dagger.Module
 import dagger.Provides

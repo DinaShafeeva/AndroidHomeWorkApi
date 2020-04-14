@@ -10,10 +10,10 @@ import javax.inject.Singleton
 @Component(modules = [AppModule::class])
     interface AppComponent {
 
-//    fun getContext(): Context
-//    fun inject(mainActivity: MainActivity)
     fun plusNetComponentBuilder(): NetComponent.Builder
     fun plusServiceComponentBuilder(): ServiceComponent.Builder
+    fun plusRepComponentBuilder(): RepComponent.Builder
+    fun plusInteractorComponentBuilder(): InteractorComponent.Builder
 
     @Component.Builder
     interface Builder {
